@@ -1,29 +1,27 @@
-// ======================================================
 import React from "react";
 import Countdown from "react-countdown";
 import { motion } from "framer-motion"; 
-import logo from '../../Assets/logo.png';  
-import bgImage from '../../Assets/background.jpg'; 
+import logo from "../../Assets/logo.png";
 
 const Header = () => {
   // Countdown renderer
   const renderer = ({ days, hours, minutes, seconds }) => (
     <motion.div 
-      className="flex justify-center space-x-4 sm:space-x-6 mt-6 sm:mt-10"
+      className="flex justify-center space-x-2 sm:space-x-4 mt-4 sm:mt-6"
       initial={{ opacity: 0, y: 30 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 1, delay: 0.5 }}
     >
-      <div className="bg-opacity-60 bg-white p-4 sm:p-6 rounded-lg text-lg sm:text-2xl font-semibold shadow-lg">
+      <div className="bg-opacity-60 bg-white p-2 sm:p-4 rounded-lg text-xs sm:text-lg font-semibold shadow-lg">
         {days} Days
       </div>
-      <div className="bg-opacity-60 bg-white p-4 sm:p-6 rounded-lg text-lg sm:text-2xl font-semibold shadow-lg">
+      <div className="bg-opacity-60 bg-white p-2 sm:p-4 rounded-lg text-xs sm:text-lg font-semibold shadow-lg">
         {hours} Hours
       </div>
-      <div className="bg-opacity-60 bg-white p-4 sm:p-6 rounded-lg text-lg sm:text-2xl font-semibold shadow-lg">
+      <div className="bg-opacity-60 bg-white p-2 sm:p-4 rounded-lg text-xs sm:text-lg font-semibold shadow-lg">
         {minutes} Minutes
       </div>
-      <div className="bg-opacity-60 bg-white p-4 sm:p-6 rounded-lg text-lg sm:text-2xl font-semibold shadow-lg">
+      <div className="bg-opacity-60 bg-white p-2 sm:p-4 rounded-lg text-xs sm:text-lg font-semibold shadow-lg">
         {seconds} Seconds
       </div>
     </motion.div>
@@ -31,36 +29,46 @@ const Header = () => {
 
   return (
     <header
-      className="relative bg-cover bg-center bg-no-repeat text-white py-12 flex flex-col items-center justify-center"
-      style={{ backgroundImage: `url(${bgImage})`, height: "100vh" }}
+      className="relative text-white py-8 flex flex-col items-center justify-center"
+      style={{ height: "100vh" }}
     >
-      {/* Dark overlay */}
-      <div className="absolute inset-0 bg-black opacity-60 z-0"></div>
+      {/* Background Video */}
+      <video
+        className="absolute inset-0 w-full h-full object-cover z-0"
+        src="https://www.w3schools.com/html/mov_bbb.mp4" // Replace with your own video link
+        autoPlay
+        loop
+        muted
+      ></video>
+
+      {/* Dark overlay on video */}
+      <div className="absolute inset-0 bg-black opacity-70 z-0"></div>
 
       {/* Logo Section */}
       <nav className="absolute top-4 w-full z-10">
         <motion.div 
-          className="flex justify-center"
+          className="flex justify-center mb-4 lg:mb-8"  // Added margin for large devices
           initial={{ opacity: 0, y: -50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          <img src={logo} alt="Logo" className="h-24 sm:h-32 lg:h-40 shadow-lg rounded-full border-4 border-yellow-400" /> {/* Updated styling */}
+          {/* Bigger logo */}
+          <img src={logo} alt="Logo" className="h-32 sm:h-40 lg:h-48" />
         </motion.div>
       </nav>
 
       {/* Content */}
-      <div className="relative z-10 text-center px-4 sm:px-8 py-6 sm:py-12 mt-8 bg-opacity-70 bg-black rounded-lg shadow-lg">
+      <div className="relative z-10 text-center px-4 sm:px-8 py-6 sm:py-10">
         <motion.h1 
-          className="text-4xl sm:text-6xl font-bold mb-4 sm:mb-6"
+          className="text-4xl sm:text-6xl font-bold mb-2 sm:mb-4"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.5 }}
         >
-          Lagos City High School Festival <br />of Music & Arts
+          Lagos City High School Festival <br /> of Music & Arts
         </motion.h1>
         <motion.p 
-          className="text-lg sm:text-2xl mb-6 sm:mb-8"
+          className="text-base sm:text-xl mb-4 sm:mb-6"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.7 }}
@@ -74,9 +82,9 @@ const Header = () => {
           renderer={renderer} 
         />
 
-        {/* Register Button with hover effect */}
+        {/* Register Button */}
         <motion.button
-          className="bg-yellow-500 hover:bg-yellow-600 text-black mt-6 sm:mt-8 px-6 sm:px-8 py-3 sm:py-4 rounded-lg text-xl font-semibold"
+          className="bg-yellow-500 hover:bg-yellow-600 text-black mt-6 px-6 py-3 rounded-lg text-lg font-semibold"
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
           initial={{ opacity: 0, y: 30 }}
@@ -91,6 +99,7 @@ const Header = () => {
 };
 
 export default Header;
+
 
 
 

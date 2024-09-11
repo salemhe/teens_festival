@@ -39,6 +39,11 @@ const RegistrationPage = () => {
                      placeholder="Phone Number"
                      className="p-2 rounded-md text-black sm:col-auto col-span-2"
                   />
+                  <input
+                     type="number"
+                     placeholder="Total Number of Attendees"
+                     className="p-2 rounded-md text-black sm:col-auto col-span-2"
+                  />
                      <select
                         id="participationType"
                         className="p-2 rounded-md text-black col-span-2"
