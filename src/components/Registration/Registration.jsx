@@ -1,6 +1,7 @@
 import React from 'react';
 import { Tab, TabGroup, TabList, TabPanel, TabPanels } from '@headlessui/react'
 import Faq from '../Faq/Faq';
+import Testimonials from '../Testimonials/Testimonials';
 
 const RegistrationPage = () => {
   return (
@@ -44,9 +45,16 @@ const RegistrationPage = () => {
                      >
                         <option value="">Type of Participation:</option>
                         <option value="1"> Creative Arts Presentations</option>
-                        <option value="2">Parade Participation</option>
-                        <option value="3">Spectator Attendance</option>
+                        <option value="2">Cultural Parade</option>
+                        <option value="3">Attending only</option>
                      </select>
+
+                     <input
+                        type="text"
+                        placeholder="Special Requests or Needs e.g Accessibility, dietary needs, etc."
+                        className="p-2 rounded-md text-black m:col-auto col-span-2"
+                     />
+                     
                      <p htmlFor="" className='col-span-2  text-left'>Agree to Terms and Conditions</p>
                      <div className='flex space-x-2 col-span-2'>
                      <input type="checkbox"  placeholder=''/>
@@ -62,6 +70,8 @@ const RegistrationPage = () => {
 
                </form>
             </TabPanel>
+
+            {/* individual form */}
             <TabPanel>
                <form className="max-w-lg mt-10 mx-auto grid grid-cols-1 md:grid-cols-2 gap-4">
                   <input
@@ -92,6 +102,13 @@ const RegistrationPage = () => {
                         <option value="1"> Art and performance Sessions </option>
                         <option value="2">Work Shops</option>
                      </select>
+
+                     <input
+                        type="text"
+                        placeholder="Special Requests or Needs e.g Accessibility, dietary needs, etc."
+                        className="p-2 rounded-md text-black m:col-auto col-span-2"
+                     />
+
                      <p htmlFor="" className='col-span-2  text-left'>Agree to Terms and Conditions</p>
                      <div className='flex space-x-2 col-span-2'>
                      <input type="checkbox"  placeholder=''/>
@@ -106,6 +123,8 @@ const RegistrationPage = () => {
                   </button>
                </form>
             </TabPanel>
+
+            {/* Group form */}
             <TabPanel>
                <form className="max-w-lg mt-10 mx-auto grid grid-cols-1 md:grid-cols-2 gap-4">
                   <input
@@ -119,8 +138,8 @@ const RegistrationPage = () => {
                      className="p-2 rounded-md text-black col-span-2 "
                   />
                   <input
-                     type="email"
-                     placeholder="Group Leader's Email"
+                     type="number"
+                     placeholder="Total Number of Attendees"
                      className="p-2 rounded-md text-black sm:col-auto col-span-2"
                   />
                   <input
@@ -132,7 +151,7 @@ const RegistrationPage = () => {
                         id="participationType"
                         className="p-2 rounded-md text-black col-span-2"
                      >
-                        <option value="">Workshop Preferences:</option>
+                        <option value="">Type of Participation:</option>
                         <option value="1">Technology & Innovation</option>
                         <option value="2">Arts & Creativity</option>
                         <option value="3">Leadership & Social Change</option>
@@ -160,8 +179,6 @@ const RegistrationPage = () => {
             </TabPanel>
          </TabPanels>
         </TabGroup>
-
-        
       </section>
 
       {/* Webinar Section */}
@@ -185,8 +202,10 @@ const RegistrationPage = () => {
         </div>
       </section>
 
+      <Testimonials />
+
       {/* Subscription Section */}
-      <section className="py-8 px-4 text-center">
+      {/* <section className="py-8 px-4 text-center">
         <h3 className="text-2xl font-bold mb-4">
           Receive the Latest Articles and Webinar Invites
         </h3>
@@ -209,7 +228,9 @@ const RegistrationPage = () => {
             Subscribe
           </button>
         </form>
-      </section>
+      </section> */}
+
+
       <Faq/>
       {/* Footer Section */}
       <footer className="bg-blue-900 text-white py-6 px-4 text-center">

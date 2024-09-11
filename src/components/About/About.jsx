@@ -17,11 +17,15 @@ const About = () => {
         animate={{ opacity: 1 }}
         transition={{ delay: 0.3, duration: 0.8 }}
       >
-        <h2 className='h2'>Lorem ipsum dolor sit amet consectetur Lorem ipsum dolor sit amet.</h2>
+        <h2 className='h2'>Celebrate Creativity and Diversity!</h2>
         <br />
-        <p className='p'>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cum illo possimus optio omnis asperiores eius recusandae.</p>
-        <p className='p'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur inventore ipsam excepturi harum, soluta possimus animi iste quaerat.</p>
-        <p className='p'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Explicabo voluptates itaque omnis nobis, assumenda nemo, corrupti, temporibus eaque necessitatibus quas ea.</p>
+        <p className='p'>Welcome to the Lagos City High School Festival of Music & Arts! This vibrant festival is a grand celebration of Nigeria's youth, creativity, and cultural diversity. Held annually in honor of Nigeria’s Independence Day, the festival provides a dynamic platform for young people to express themselves through various creative outlets and contribute positively to the future of our nation.</p>
+        <h4 className='h2'>Event Highlights</h4>
+        <p className='p'>◾ <b>Creative Art Presentations: </b>Experience an array of artistic performances and exhibitions that showcase the immense talent and creativity of Nigeria’s youth. From music and dance to visual arts, there’s something for everyone to enjoy.</p>
+        <p className='p'>◾ <b>Colorful Parade:</b> Witness a spectacular parade featuring participating schools, each bringing their unique flair and enthusiasm. This vibrant procession celebrates unity and school spirit with colorful floats and enthusiastic performers.</p>
+        <p className='p'>◾ <b>Symposiums on Nation Building: </b> Engage in insightful symposiums and workshops that focus on nation-building, leadership, and innovation. These sessions aim to inspire and equip young minds with the tools needed to contribute effectively to our society.</p>
+        
+        <p className='p'>◾ <b>Special Performances:</b> Look forward to guest performances from renowned artists and motivational speakers who will add a unique touch to the festival.</p>
         <motion.button
           className="bg-yellow-500 hover:bg-yellow-600 text-black mt-4 sm:mt-6 px-4 sm:px-6 py-2 sm:py-3 rounded"
           whileHover={{ scale: 1.1 }}
@@ -33,7 +37,7 @@ const About = () => {
 
       <br /><br /><br />
 
-      <motion.div 
+      {/* <motion.div 
         className='about__two'
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
@@ -60,7 +64,7 @@ const About = () => {
         >
           <img src={image} alt='webinar' className='image__styled' />
         </motion.div>
-      </motion.div>
+      </motion.div> */}
     </motion.div>
   )
 }
