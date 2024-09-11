@@ -19,13 +19,13 @@ const About = () => {
       >
         <h2 className='h2'>Celebrate Creativity and Diversity!</h2>
         <br />
-        <p className='p'>Welcome to the Lagos City High School Festival of Music & Arts! This vibrant festival is a grand celebration of Nigeria's youth, creativity, and cultural diversity. Held annually in honor of Nigeria’s Independence Day, the festival provides a dynamic platform for young people to express themselves through various creative outlets and contribute positively to the future of our nation.</p>
+        <p className='p'>Welcome to the Lagos City High School Festival of Music & Arts! This vibrant festival is a grand celebration of Nigeria's youth, creativity, and cultural diversity. Organized in honor of Nigeria’s Independence Day, this first of its kind festival provides a dynamic platform for young people to express themselves through various creative outlets and contribute positively to the future of our nation.</p>
         <h4 className='h2'>Event Highlights</h4>
         <p className='p'>◾ <b>Creative Art Presentations: </b>Experience an array of artistic performances and exhibitions that showcase the immense talent and creativity of Nigeria’s youth. From music and dance to visual arts, there’s something for everyone to enjoy.</p>
         <p className='p'>◾ <b>Colorful Parade:</b> Witness a spectacular parade featuring participating schools, each bringing their unique flair and enthusiasm. This vibrant procession celebrates unity and school spirit with colorful floats and enthusiastic performers.</p>
         <p className='p'>◾ <b>Symposiums on Nation Building: </b> Engage in insightful symposiums and workshops that focus on nation-building, leadership, and innovation. These sessions aim to inspire and equip young minds with the tools needed to contribute effectively to our society.</p>
         
-        <p className='p'>◾ <b>Special Performances:</b> Look forward to guest performances from renowned artists and motivational speakers who will add a unique touch to the festival.</p>
+        <p className='p'>◾ <b>Special Performances:</b> Look forward to guest performances from renowned artists and speakers who will add a unique touch to the festival.</p>
         <motion.button
           className="bg-yellow-500 hover:bg-yellow-600 text-black mt-4 sm:mt-6 px-4 sm:px-6 py-2 sm:py-3 rounded"
           whileHover={{ scale: 1.1 }}
