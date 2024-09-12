@@ -2,6 +2,7 @@ import React from "react";
 import Countdown from "react-countdown";
 import { motion } from "framer-motion"; 
 import logo from "../../Assets/logo.png";
+import video from "../../Assets/festival-vid.mp4"
 
 const Header = () => {
   // Countdown renderer
@@ -35,7 +36,7 @@ const Header = () => {
       {/* Background Video */}
       <video
         className="absolute inset-0 w-full h-full object-cover z-0"
-        src="https://www.w3schools.com/html/mov_bbb.mp4" // Replace with your own video link
+        src={video} // Replace with your own video link
         autoPlay
         loop
         muted
