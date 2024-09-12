@@ -8,34 +8,29 @@ const faqs = [
       "It’s an annual event celebrating Nigeria’s youth through music, art, and creative expression, held to honor Nigeria’s Independence Day.",
   },
   {
-    question: "How can my school participate?",
+    question: "How do I get the guidelines for the creative arts presentations?",
     answer:
-      "Register your school to join in creative presentations, the parade, or as spectators.",
+      "Fill in your correct contact information and the guidelines would be sent to your mail or phone number.",
   },
   {
-    question: "Can individuals join?",
+    question: "Is it compulsory to use the guidelines for the presentations and parade?",
     answer:
-      "Yes, individuals can register to attend workshops or participate in art and performance sessions.",
+      "Yes it is. While we encourage originality and authenticity, we also require your adherence to the rules and guidelines for participation in the event.",
   },
   {
-    question: "What about groups?",
+    question: "Can a group participate in the parade?",
     answer:
-      "Groups can register to showcase their collaborative projects and talents.",
+      "For this edition of the festival, parade participation has been restricted to schools only. In future events, we would work towards the inclusion of groups.",
   },
   {
-    question: "How do I register?",
+    question: "Can I participate online?",
     answer:
-      "Fill out the registration form above, selecting your participation type and providing the necessary details.",
+      "Yes, you certainly can. The program would be streamed live on our social media platforms. Be sure to follow us, so you don’t miss out on the event!",
   },
   {
-    question: "What if I have special requests?",
+    question: "Is participating in the creative arts presentation or parade compulsory?",
     answer:
-      "Specify any special needs or requests in the designated section of the form.",
-  },
-  {
-    question: "Where can I find more information?",
-    answer:
-      "For more details, visit our website or contact us at [Contact Email].",
+      "No it is not. We would be glad to receive you as attendees at the event even if you choose not to participate in the performance activities.",
   },
   // More questions...
 ]

@@ -17,9 +17,9 @@ const About = () => {
         animate={{ opacity: 1 }}
         transition={{ delay: 0.3, duration: 0.8 }}
       >
-        <h2 className='h2'>Celebrate Creativity and Diversity!</h2>
+        <h2 className='h2'>Welcome !</h2>
         <br />
-        <p className='p'>Welcome to the Lagos City High School Festival of Music & Arts! This vibrant festival is a grand celebration of Nigeria's youth, creativity, and cultural diversity. Organized in honor of Nigeria’s Independence Day, this first of its kind festival provides a dynamic platform for young people to express themselves through various creative outlets and contribute positively to the future of our nation.</p>
+        <p className='p'>The Lagos City High School Festival of Music & Arts is a grand celebration of Nigeria's youth, creativity, and cultural diversity. Organized in honor of Nigeria’s Independence Day, this first of its kind festival provides a dynamic platform for young people to express themselves through various creative outlets and contribute positively to the future of our nation.</p>
         <h4 className='h2'>Event Highlights</h4>
         <p className='p'>◾ <b>Creative Art Presentations: </b>Experience an array of artistic performances and exhibitions that showcase the immense talent and creativity of Nigeria’s youth. From music and dance to visual arts, there’s something for everyone to enjoy.</p>
         <p className='p'>◾ <b>Colorful Parade:</b> Witness a spectacular parade featuring participating schools, each bringing their unique flair and enthusiasm. This vibrant procession celebrates unity and school spirit with colorful floats and enthusiastic performers.</p>

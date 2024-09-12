@@ -11,11 +11,12 @@ const ParticipationSection = () => {
           {/* School Participation */}
           <div className="bg-white p-6 rounded-lg shadow-lg">
             <h3 className="text-2xl font-semibold mb-4">School Participation</h3>
-            <p className="mb-4">Is your school eager to be a part of this transformative event? We offer several opportunities for schools to get involved:</p>
+            <p className="mb-4">Is your school eager to be a part of this transformative event? Here’s how to get involved :</p>
             <ul className="list-disc list-inside mb-4">
-              <li><strong>Creative Arts Presentations:</strong> Your students can showcase their talents in music, dance, drama, and visual arts.</li>
-              <li><strong>Parade Participation:</strong> Join the parade and represent your school with pride and creativity.</li>
-              <li><strong>Spectator Attendance:</strong> Enjoy the festival as spectators and experience the festivities firsthand.</li>
+              <li><strong>Creative Arts Presentations:</strong> Students of your school can showcase their talents in music, poetry, dance, drama, and visual arts.</li>
+              <li><strong>Parade Participation:</strong> Join the parade and represent your school with pride and creativity.
+              </li>
+              <li><strong>Spectator Attendance:</strong> Be present on that day to experience the festival and its activities firsthand!</li>
             </ul>
             <a href="/register-school" className="block text-center bg-blue-500 text-white py-2 px-4 rounded-lg hover:bg-blue-600">Register Your School</a>
           </div>
@@ -23,10 +24,10 @@ const ParticipationSection = () => {
           {/* Individual Participation */}
           <div className="bg-white p-6 rounded-lg shadow-lg">
             <h3 className="text-2xl font-semibold mb-4">Individual Participation</h3>
-            <p className="mb-4">Are you a teen looking to make a difference and share your talents? Register as an individual to:</p>
+            <p className="mb-4">Are you a young person looking to be a part of the grand celebration or share your talents? Here’s how to get involved:</p>
             <ul className="list-disc list-inside mb-4">
-              <li><strong>Participate in Workshops:</strong> Engage in sessions that cover a range of topics from arts and creativity to technology and innovation.</li>
-              <li><strong>Join Art and Performance Sessions:</strong> Be a part of various performances and artistic displays.</li>
+              <li><strong>Showcasing your Creative Arts presentation:</strong> Be a part of the various performances and artistic displays.</li>
+              <li><strong>Attending the Festival:</strong> Participate in the immersive and transformative experience of the festival by attending the event.</li>
             </ul>
             <a href="/register-individual" className="block text-center bg-green-500 text-white py-2 px-4 rounded-lg hover:bg-green-600">Register Individually</a>
           </div>
@@ -34,10 +35,10 @@ const ParticipationSection = () => {
           {/* Group Participation */}
           <div className="bg-white p-6 rounded-lg shadow-lg">
             <h3 className="text-2xl font-semibold mb-4">Group Participation</h3>
-            <p className="mb-4">Got a group of friends or an organization that wants to collaborate and showcase talent? Register your group to:</p>
+            <p className="mb-4">Are you a group of friends or an organization that wants to participate in the festival? Register your group now to:</p>
             <ul className="list-disc list-inside mb-4">
-              <li><strong>Showcase Collaborative Projects:</strong> Present group projects and performances that highlight your collective skills.</li>
-              <li><strong>Display Talents and Ideas:</strong> Share your innovative ideas and talents with a broader audience.</li>
+              <li><strong>Display Creative Arts Presentations:</strong> Showcase your talent and creativity through various creative presentations.</li>
+              <li><strong>Attending the Festial:</strong> Be live at the event to participate in this awe-inspiring festival of music & arts.</li>
             </ul>
             <a href="/register-group" className="block text-center bg-red-500 text-white py-2 px-4 rounded-lg hover:bg-red-600">Register Your Group</a>
           </div>
