@@ -5,7 +5,7 @@ const faqs = [
   {
     question: " What is the Lagos City High School Festival of Music & Arts?",
     answer:
-      "It’s an annual event celebrating Nigeria’s youth through music, art, and creative expression, held to honor Nigeria’s Independence Day.",
+      "It’s the first edition of an annual event celebrating Nigeria’s youth through music, art, and creative expression, held to honor Nigeria’s Independence Day.",
   },
   {
     question: "How do I get the guidelines for the creative arts presentations?",
