@@ -17,7 +17,7 @@ const About = () => {
         animate={{ opacity: 1 }}
         transition={{ delay: 0.3, duration: 0.8 }}
       >
-        <h2 className='h2'>Welcome !</h2>
+        <h2 className='h2'>Celebrate Creativity and Diversity!</h2>
         <br />
         <p className='p'>The Lagos City High School Festival of Music & Arts is a grand celebration of Nigeria's youth, creativity, and cultural diversity. Organized in honor of Nigeria’s Independence Day, this first of its kind festival provides a dynamic platform for young people to express themselves through various creative outlets and contribute positively to the future of our nation.</p>
         <h4 className='h2'>Event Highlights</h4>
@@ -36,35 +36,6 @@ const About = () => {
       </motion.div>
 
       <br /><br /><br />
-
-      {/* <motion.div 
-        className='about__two'
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 0.5, duration: 1 }}
-      >
-        <div className='text__section'>
-          <h3 className='h3'>Lorem ipsum dolor sit amet.</h3>
-          <p className='p'>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Suscipit ipsa mollitia aperiam quaerat inventore veniam quia laborum! Nemo, veniam.</p>
-          <p className='p'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita incidunt cum enim numquam qui pariatur, quae hic.</p>
-          <br />
-          <motion.button
-            className="bg-yellow-500 hover:bg-yellow-600 text-black mt-4 sm:mt-6 px-4 sm:px-6 py-2 sm:py-3 rounded"
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.9 }}
-          >
-            Register Now
-          </motion.button>
-        </div>
-
-        <motion.div 
-          className='image__section'
-          whileHover={{ scale: 1.05 }}
-          transition={{ duration: 0.3 }}
-        >
-          <img src={image} alt='webinar' className='image__styled' />
-        </motion.div>
-      </motion.div> */}
     </motion.div>
   )
 }
