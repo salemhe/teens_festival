@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-scroll';
 
 const ParticipationSection = () => {
   return (
@@ -18,7 +19,7 @@ const ParticipationSection = () => {
               </li>
               <li><strong>Spectator Attendance:</strong> Be present on that day to experience the festival and its activities firsthand!</li>
             </ul>
-            <a href="/register-school" className="block text-center bg-blue-500 text-white py-2 px-4 rounded-lg hover:bg-blue-600">Register Your School</a>
+            <Link to="registration-section" className="block text-center bg-blue-500 text-white py-2 px-4 rounded-lg hover:bg-blue-600"  smooth={true} duration={500}>Register Your School</Link>
           </div>
 
           {/* Individual Participation */}
@@ -29,7 +30,7 @@ const ParticipationSection = () => {
               <li><strong>Showcasing your Creative Arts presentation:</strong> Be a part of the various performances and artistic displays.</li>
               <li><strong>Attending the Festival:</strong> Participate in the immersive and transformative experience of the festival by attending the event.</li>
             </ul>
-            <a href="/register-individual" className="block text-center bg-green-500 text-white py-2 px-4 rounded-lg hover:bg-green-600">Register Individually</a>
+            <Link to="registration-section" className="block text-center bg-green-500 text-white py-2 px-4 rounded-lg hover:bg-green-600"  smooth={true} duration={500}>Register Individually</Link>
           </div>
 
           {/* Group Participation */}
@@ -40,7 +41,7 @@ const ParticipationSection = () => {
               <li><strong>Display Creative Arts Presentations:</strong> Showcase your talent and creativity through various creative presentations.</li>
               <li><strong>Attending the Festial:</strong> Be live at the event to participate in this awe-inspiring festival of music & arts.</li>
             </ul>
-            <a href="/register-group" className="block text-center bg-red-500 text-white py-2 px-4 rounded-lg hover:bg-red-600">Register Your Group</a>
+            <Link to="registration-section" className="block text-center bg-red-500 text-white py-2 px-4 rounded-lg hover:bg-red-600"  smooth={true} duration={500}>Register Your Group</Link>
           </div>
 
         </div>
@@ -50,3 +51,6 @@ const ParticipationSection = () => {
 };
 
 export default ParticipationSection;
+
+
+
