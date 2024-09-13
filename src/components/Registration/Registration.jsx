@@ -162,7 +162,7 @@ const RegistrationPage = () => {
                 <input
                   type="number"
                   placeholder="Total Number of Attendees"
-                  className="p-2 rounded-md text-black sm:col-auto col-span-2"
+                  className="p-2 rounded-md text-black  col-span-2"
                   required
                 />
                 <select
