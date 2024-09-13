@@ -3,6 +3,7 @@ import Countdown from "react-countdown";
 import { motion } from "framer-motion"; 
 import logo from "../../Assets/logo.png";
 import video from "../../Assets/festival-vid.mp4"
+import { Link } from "react-scroll";
 
 const Header = () => {
   // Countdown renderer
@@ -84,6 +85,7 @@ const Header = () => {
         />
 
         {/* Register Button */}
+        <Link to="registration-section" smooth={true} duration={500}>
         <motion.button
           className="bg-yellow-500 hover:bg-yellow-600 text-black mt-6 px-6 py-3 rounded-lg text-lg font-semibold"
           whileHover={{ scale: 1.05 }}
@@ -94,6 +96,7 @@ const Header = () => {
         >
           Register Now
         </motion.button>
+        </Link>
       </div>
     </header>
   );

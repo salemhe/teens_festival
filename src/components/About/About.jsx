@@ -2,6 +2,7 @@ import React from 'react'
 import { motion } from 'framer-motion'
 import image from "../../Assets/background.jpg";
 import './About.css'
+import { Link } from 'react-scroll';
 
 const About = () => {
   return (
@@ -26,13 +27,17 @@ const About = () => {
         <p className='p'>◾ <b>Symposiums on Nation Building: </b> Engage in insightful symposiums and workshops that focus on nation-building, leadership, and innovation. These sessions aim to inspire and equip young minds with the tools needed to contribute effectively to our society.</p>
         
         <p className='p'>◾ <b>Special Performances:</b> Look forward to guest performances from renowned artists and speakers who will add a unique touch to the festival.</p>
-        <motion.button
+        <Link to="registration-section" smooth={true} duration={500}>
+          <motion.button
+
           className="bg-yellow-500 hover:bg-yellow-600 text-black mt-4 sm:mt-6 px-4 sm:px-6 py-2 sm:py-3 rounded"
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.9 }}
-        >
+          >
           Register Now
-        </motion.button>
+          </motion.button>
+        </Link>
+       
       </motion.div>
 
       <br /><br /><br />

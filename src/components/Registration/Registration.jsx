@@ -74,7 +74,7 @@ const submitSchoolForm = async (e) => {
    }
  };
   return (
-    <div className="bg-blue-900 text-white font-sans">
+    <div className="bg-blue-900 text-white font-sans" id="registration-section">
       {/* Registration Section */}
       <section className="py-8 px-4 text-center">
         <h2 className="text-3xl font-bold mb-4">Register Form</h2>
