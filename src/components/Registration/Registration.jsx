@@ -318,68 +318,20 @@ const submitSchoolForm = async (e) => {
         </TabGroup>
       </section>
 
-      {/* Webinar Section */}
-      {/* <section className="py-8 px-4 bg-white text-black">
-        <div className="max-w-lg mx-auto text-center">
-          <img
-            src="https://via.placeholder.com/300" // replace this with the actual image URL
-            alt="Webinar"
-            className="w-full h-auto rounded-md mb-4"
-          />
-          <h3 className="text-2xl font-bold mb-2">
-            Have You Been Watching Our Webinar Series?
-          </h3>
-          <p className="mb-4">
-            We cover a variety of topics designed to help you grow. Don’t miss
-            out on valuable content from experts.
-          </p>
-          <button className="bg-yellow-500 text-black px-4 py-2 rounded-md">
-            Watch Webinars
-          </button>
-        </div>
-      </section> */}
-
-      {/* <Testimonials /> */}
-
-      {/* Subscription Section */}
-      {/* <section className="py-8 px-4 text-center">
-        <h3 className="text-2xl font-bold mb-4">
-          Receive the Latest Articles and Webinar Invites
-        </h3>
-        <p className="mb-6">Direct to your inbox</p>
-        <form className="max-w-lg mx-auto grid grid-cols-1 md:grid-cols-2 gap-4">
-          <input
-            type="email"
-            placeholder="Email Address"
-            className="p-2 rounded-md text-black col-span-2"
-          />
-          <input
-            type="text"
-            placeholder="Professional Role"
-            className="p-2 rounded-md text-black col-span-2"
-          />
-          <button
-            type="submit"
-            className="bg-yellow-500 text-black px-4 py-2 rounded-md col-span-2"
-          >
-            Subscribe
-          </button>
-        </form>
-      </section> */}
-
 
       <Faq/>
       {/* Footer Section */}
       <footer className="bg-blue-900 text-white py-6 px-4 text-center">
-        <div className="flex justify-center space-x-6 mb-4">
-          <a href="#" className="text-yellow-500">Facebook</a>
-          <a href="#" className="text-yellow-500">Twitter</a>
-          <a href="#" className="text-yellow-500">LinkedIn</a>
-        </div>
+         <div className="flex justify-center space-x-6 mb-4">
+            <a href="https://www.instagram.com/theofficialteensvoice?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" className="text-yellow-500">Instagram</a>
+            <a href="https://youtube.com/@theofficialteensvoice?si=kahc5i6GoNAoM4Zc" className="text-yellow-500">YouTube</a>
+            <a href="https://www.kingsch.at/p/c1dZM2h" className="text-yellow-500">KingsChat</a>
+         </div>
+
         <div className="text-sm space-x-4">
           <a href="#">Privacy Policy</a>
           <a href="#">Terms of Service</a>
-          <a href="#">Contact Us</a>
+          <a href="tel:+2348024941683">Contact Us</a>
         </div>
       </footer>
     </div>
@@ -387,3 +339,8 @@ const submitSchoolForm = async (e) => {
 };
 
 export default RegistrationPage;
+
+
+
+
+
