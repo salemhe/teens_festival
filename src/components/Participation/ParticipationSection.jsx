@@ -17,7 +17,7 @@ const ParticipationSection = ({ setActiveTab }) => {
               <li><strong>Creative Arts Presentations:</strong> Students of your school can showcase their talents in music, poetry, dance, drama, and visual arts.</li>
               <li><strong>Parade Participation:</strong> Join the parade and represent your school with pride and creativity.
               </li>
-              <li><strong>Spectator Attendance:</strong> Be present on that day to experience the festival and its activities firsthand!</li>
+              <li><strong>Live Attendance:</strong> Be present on that day to experience the festival and its activities firsthand!</li>
             </ul>
             <Link to="school" onClick={() => setActiveTab(0)} className="block text-center bg-blue-500 text-white py-2 px-4 rounded-lg hover:bg-blue-600"  smooth={true} duration={500}>Register Your School</Link>
           </div>

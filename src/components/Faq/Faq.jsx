@@ -32,6 +32,21 @@ const faqs = [
     answer:
       "No it is not. We would be glad to receive you as attendees at the event even if you choose not to participate in the performance activities.",
   },
+  {
+    question: "Can I Be a Sponsor or Advertise at the Festival?",
+    answer:
+      "Yes, there are opportunities for sponsorship as well as advertisement at the festival. Kindly send a mail to admin@teensvoice.org indicating whether you would like to sponsor the event or would like to advertise your products/services at the event."
+  },
+  {
+    question: "Can I volunteer at the festival?",
+    answer: 
+      "Certainly! In the spirit of nation building and making impact, we would love for you to join the success of the program by being a part of our amazing workforce. Volunteering opportunities including greeters/ushers, crowd control, registration, media, venue management, and floor management. Kindly send a mail to volunteer@teensvoice.org indicating your area of interest."
+  },
+  {
+    question: "Can I Be a Sponsor or Advertise at the Festival?",
+    answer: 
+      "Yes, there are opportunities for sponsorship as well as advertising at the festival. Kindly send a mail to admin@teensvoice.org indicating whether you would like to sponsor the event or advertise your products/services at the event."
+  }
   // More questions...
 ]
 

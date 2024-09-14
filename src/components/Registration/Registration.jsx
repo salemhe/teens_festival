@@ -81,7 +81,7 @@ const submitSchoolForm = async (e) => {
  
    try {
      await addDoc(collection(db, "individualRegistrations"), formData);
-     toast.success("School registration submitted successfully!");
+     toast.success("Individual registration submitted successfully!");
      e.target.reset();
      setIndividualParticipation([]);
    } catch (err) {
@@ -104,7 +104,7 @@ const submitSchoolForm = async (e) => {
  
    try {
      await addDoc(collection(db, "groupRegistrations"), formData);
-     toast.success("School registration submitted successfully!");
+     toast.success("Group registration submitted successfully!");
      e.target.reset();
      setGroupParticipation([]);
    } catch (err) {
@@ -119,10 +119,38 @@ const submitSchoolForm = async (e) => {
         <h2 className="text-3xl font-bold mb-4">Register Form</h2>
         <p className="mb-6">Please fill out the form below based on your participation type.<br/>  Make sure to complete all relevant sections for a smooth registration process.</p>
         <TabGroup selectedIndex={activeTab} onChange={setActiveTab} >
-         <TabList >
-            <Tab className="rounded-full py-1 px-3 text-sm/6 font-semibold text-white focus:outline-none data-[selected]:bg-white/10 data-[hover]:bg-white/5 data-[selected]:data-[hover]:bg-white/10 data-[focus]:outline-1 data-[focus]:outline-white">School</Tab>
-            <Tab className="rounded-full py-1 px-3 text-sm/6 font-semibold text-white focus:outline-none data-[selected]:bg-white/10 data-[hover]:bg-white/5 data-[selected]:data-[hover]:bg-white/10 data-[focus]:outline-1 data-[focus]:outline-white">Individual</Tab>
-            <Tab className="rounded-full py-1 px-3 text-sm/6 font-semibold text-white focus:outline-none data-[selected]:bg-white/10 data-[hover]:bg-white/5 data-[selected]:data-[hover]:bg-white/10 data-[focus]:outline-1 data-[focus]:outline-white">Group</Tab>
+         <TabList  className="flex justify-center mb-4">
+            <Tab   className={({ selected }) =>
+                `rounded-full py-1 px-3 text-sm font-semibold focus:outline-none ${
+                  selected
+                    ? 'bg-blue-100 text-blue-900'
+                    : 'text-white hover:bg-white/10'
+                }`
+              }
+            >
+               School
+            </Tab>
+            <Tab  className={({ selected }) =>
+                `rounded-full py-1 px-3 text-sm font-semibold focus:outline-none ${
+                  selected
+                    ? 'bg-blue-100 text-blue-900'
+                    : 'text-white hover:bg-white/10'
+                }`
+              }
+            >
+               Individual
+            </Tab>
+            <Tab
+              className={({ selected }) =>
+                `rounded-full py-1 px-3 text-sm font-semibold focus:outline-none ${
+                  selected
+                    ? 'bg-blue-100 text-blue-900'
+                    : 'text-white hover:bg-white/10'
+                }`
+              }
+            >
+              Group
+            </Tab>
          </TabList>
          <TabPanels>
          <TabPanel id='school'>
