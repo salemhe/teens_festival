@@ -42,11 +42,6 @@ const faqs = [
     answer: 
       "Certainly! In the spirit of nation building and making impact, we would love for you to join the success of the program by being a part of our amazing workforce. Volunteering opportunities including greeters/ushers, crowd control, registration, media, venue management, and floor management. Kindly send a mail to volunteer@teensvoice.org indicating your area of interest."
   },
-  {
-    question: "Can I Be a Sponsor or Advertise at the Festival?",
-    answer: 
-      "Yes, there are opportunities for sponsorship as well as advertising at the festival. Kindly send a mail to admin@teensvoice.org indicating whether you would like to sponsor the event or advertise your products/services at the event."
-  }
   // More questions...
 ]
 
@@ -55,7 +50,7 @@ export default function Faq() {
     <div className="bg-white">
       <div className="mx-auto max-w-7xl px-6 py-24 sm:py-32 lg:px-8 lg:py-40">
         <div className="mx-auto max-w-4xl divide-y divide-gray-900/10">
-          <h2 className="text-2xl font-bold leading-10 tracking-tight text-gray-900">Frequently asked questions</h2>
+          <h2 className="text-2xl font-bold leading-10 tracking-tight text-gray-900">Frequently Asked Questions (FAQ)</h2>
           <dl className="mt-10 space-y-6 divide-y divide-gray-900/10">
             {faqs.map((faq) => (
               <Disclosure key={faq.question} as="div" className="pt-6">

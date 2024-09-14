@@ -21,17 +21,16 @@ const RegistrationPage = ({ activeTab, setActiveTab }) => {
    const participationOptions = [
      { value: 'Creative Arts Presentations', label: 'Creative Arts Presentations' },
      { value: 'Parade Participation', label: 'Parade Participation' },
-     { value: 'Spectator Attendance', label: 'Spectator Attendance' }
+     { value: 'Attending only', label: 'Attending only' }
    ];
    const individualOptions = [
-     { value: 'Workshops', label: 'Workshops' },
-     { value: 'Art and Performance Sessions', label: 'Art and Performance Sessions' },
+     { value: 'Creative Arts Presentations', label: 'Workshops' },
+     { value: 'Attending only', label: 'Art and Performance Sessions' },
    ]; 
    const groupOptions = [
-     { value: 'Technology & Innovation', label: 'Technology & Innovation' },
-     { value: 'Arts & Creativity', label: 'Arts & Creativity' },
-     { value: 'Leadership & Social Change', label: 'Leadership & Social Change' },
-     { value: 'Entrepreneurship & Business', label: 'Entrepreneurship & Business' }
+      { value: 'Creative Arts Presentations', label: 'Creative Arts Presentations' },
+      { value: 'Parade Participation', label: 'Parade Participation' },
+     { value: 'Creative Arts Presentations', label: 'Leadership & Social Change' },
    ];
    const handleParticipationChange = (selectedOptions) => {
       setSelectedParticipation(selectedOptions);
