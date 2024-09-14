@@ -1,13 +1,47 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Tab, TabGroup, TabList, TabPanel, TabPanels } from '@headlessui/react'
 import Faq from '../Faq/Faq';
-import Testimonials from '../Testimonials/Testimonials';
 import { addDoc, collection } from "firebase/firestore";
 import { db } from "../../firebase"; 
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import Select from 'react-select';
+import ParticipationSection from '../Participation/ParticipationSection';
 
-const RegistrationPage = () => {
+const RegistrationPage = ({ activeTab, setActiveTab }) => {
+   const [selectedTab, setSelectedTab] = useState(0);
+   const [selectedParticipation, setSelectedParticipation] = useState([]);
+   const [individualParticipation, setIndividualParticipation] = useState([]);
+   const [groupParticipation, setGroupParticipation] = useState([]);
+
+   const handleTabSwitch = (tabIndex) => {
+      setSelectedTab(tabIndex); // Update selected tab
+    };
+
+   const participationOptions = [
+     { value: 'Creative Arts Presentations', label: 'Creative Arts Presentations' },
+     { value: 'Parade Participation', label: 'Parade Participation' },
+     { value: 'Spectator Attendance', label: 'Spectator Attendance' }
+   ];
+   const individualOptions = [
+     { value: 'Workshops', label: 'Workshops' },
+     { value: 'Art and Performance Sessions', label: 'Art and Performance Sessions' },
+   ]; 
+   const groupOptions = [
+     { value: 'Technology & Innovation', label: 'Technology & Innovation' },
+     { value: 'Arts & Creativity', label: 'Arts & Creativity' },
+     { value: 'Leadership & Social Change', label: 'Leadership & Social Change' },
+     { value: 'Entrepreneurship & Business', label: 'Entrepreneurship & Business' }
+   ];
+   const handleParticipationChange = (selectedOptions) => {
+      setSelectedParticipation(selectedOptions);
+    };
+   const handleIndividualChange = (selectedOptions) => {
+      setIndividualParticipation(selectedOptions);
+    };
+   const handleGroupChange = (selectedOptions) => {
+      setGroupParticipation(selectedOptions);
+    };
    // Handle School form submission
 const submitSchoolForm = async (e) => {
    e.preventDefault();
@@ -17,7 +51,7 @@ const submitSchoolForm = async (e) => {
      email: e.target[2].value,
      phoneNumber: e.target[3].value,
      totalAttendees: e.target[4].value,
-     participationType: e.target[5].value,
+     participationType: selectedParticipation.map(option => option.value), // Store selected values
      specialRequests: e.target[6].value,
      agreeToTerms: e.target[7].checked,
    };
@@ -26,10 +60,12 @@ const submitSchoolForm = async (e) => {
      await addDoc(collection(db, "schoolRegistrations"), formData);
      toast.success("School registration submitted successfully!");
      e.target.reset();
+     setSelectedParticipation([]);
    } catch (err) {
      console.error("Error adding document: ", err);
    }
  };
+
  
  // Handle Individual form submission
  const submitIndividualForm = async (e) => {
@@ -38,7 +74,7 @@ const submitSchoolForm = async (e) => {
      fullName: e.target[0].value,
      email: e.target[1].value,
      phoneNumber: e.target[2].value,
-     participationType: e.target[3].value,
+     participationType: individualParticipation.map(option => option.value),
      specialRequests: e.target[4].value,
      agreeToTerms: e.target[5].checked,
    };
@@ -47,6 +83,7 @@ const submitSchoolForm = async (e) => {
      await addDoc(collection(db, "individualRegistrations"), formData);
      toast.success("School registration submitted successfully!");
      e.target.reset();
+     setIndividualParticipation([]);
    } catch (err) {
      console.error("Error adding document: ", err);
    }
@@ -60,7 +97,7 @@ const submitSchoolForm = async (e) => {
      groupLeader: e.target[1].value,
      totalAttendees: e.target[2].value,
      phoneNumber: e.target[3].value,
-     participationType: e.target[4].value,
+     participationType: groupParticipation.map(option => option.value),
      specialRequests: e.target[5].value,
      agreeToTerms: e.target[6].checked,
    };
@@ -69,24 +106,26 @@ const submitSchoolForm = async (e) => {
      await addDoc(collection(db, "groupRegistrations"), formData);
      toast.success("School registration submitted successfully!");
      e.target.reset();
+     setGroupParticipation([]);
    } catch (err) {
      console.error("Error adding document: ", err);
    }
  };
   return (
-    <div className="bg-blue-900 text-white font-sans" id="registration-section">
+    <div className="bg-[#07154a] text-white font-sans" id="registration-section">
+      {/* <ParticipationSection onTabSwitch={handleTabSwitch} /> */}
       {/* Registration Section */}
       <section className="py-8 px-4 text-center">
         <h2 className="text-3xl font-bold mb-4">Register Form</h2>
         <p className="mb-6">Please fill out the form below based on your participation type.<br/>  Make sure to complete all relevant sections for a smooth registration process.</p>
-        <TabGroup>
-         <TabList clas>
+        <TabGroup selectedIndex={activeTab} onChange={setActiveTab} >
+         <TabList >
             <Tab className="rounded-full py-1 px-3 text-sm/6 font-semibold text-white focus:outline-none data-[selected]:bg-white/10 data-[hover]:bg-white/5 data-[selected]:data-[hover]:bg-white/10 data-[focus]:outline-1 data-[focus]:outline-white">School</Tab>
             <Tab className="rounded-full py-1 px-3 text-sm/6 font-semibold text-white focus:outline-none data-[selected]:bg-white/10 data-[hover]:bg-white/5 data-[selected]:data-[hover]:bg-white/10 data-[focus]:outline-1 data-[focus]:outline-white">Individual</Tab>
             <Tab className="rounded-full py-1 px-3 text-sm/6 font-semibold text-white focus:outline-none data-[selected]:bg-white/10 data-[hover]:bg-white/5 data-[selected]:data-[hover]:bg-white/10 data-[focus]:outline-1 data-[focus]:outline-white">Group</Tab>
          </TabList>
          <TabPanels>
-         <TabPanel>
+         <TabPanel id='school'>
             <ToastContainer
                position="top-right"
                autoClose={5000}
@@ -133,7 +172,7 @@ const submitSchoolForm = async (e) => {
                   className="p-2 rounded-md text-black  col-span-2"
                   required
                />
-               <select
+               {/* <select
                   id="participationType"
                   className="p-2 rounded-md text-black col-span-2"
                   required
@@ -142,7 +181,17 @@ const submitSchoolForm = async (e) => {
                   <option value="1">Creative Arts Presentations</option>
                   <option value="2">Cultural Parade</option>
                   <option value="3">Attending only</option>
-               </select>
+               </select> */}
+               <div className="col-span-2">
+                  <Select
+                  isMulti
+                  options={participationOptions}
+                  value={selectedParticipation}
+                  onChange={handleParticipationChange}
+                  placeholder="Type of Participation" 
+                  className="text-black text-left"
+                  />
+               </div>
                <input
                   type="text"
                   placeholder="Special Requests or Needs e.g Accessibility, dietary needs, etc."
@@ -169,7 +218,7 @@ const submitSchoolForm = async (e) => {
 
 
             {/* individual form */}
-            <TabPanel>
+            <TabPanel id='individual'>
                <ToastContainer
                   position="top-right"
                   autoClose={5000}
@@ -204,7 +253,7 @@ const submitSchoolForm = async (e) => {
                      className="p-2 rounded-md text-black sm:col-auto col-span-2"
                      required
                   />
-                  <select
+                  {/* <select
                      id="participationType"
                      className="p-2 rounded-md text-black col-span-2"
                      required
@@ -212,7 +261,17 @@ const submitSchoolForm = async (e) => {
                      <option value="">Type of Participation:</option>
                      <option value="1">Art and Performance Sessions</option>
                      <option value="2">Workshops</option>
-                  </select>
+                  </select> */}
+                  <div className="col-span-2">
+                     <Select
+                     isMulti
+                     options={individualOptions}
+                     value={individualParticipation}
+                     onChange={handleIndividualChange}
+                     placeholder="Type of Participation" 
+                     className="text-black text-left"
+                     />
+                  </div>
                   <input
                      type="text"
                      placeholder="Special Requests or Needs e.g Accessibility, dietary needs, etc."
@@ -279,7 +338,7 @@ const submitSchoolForm = async (e) => {
                      className="p-2 rounded-md text-black sm:col-auto col-span-2"
                      required
                   />
-                  <select
+                  {/* <select
                      id="participationType"
                      className="p-2 rounded-md text-black col-span-2"
                      required
@@ -289,7 +348,17 @@ const submitSchoolForm = async (e) => {
                      <option value="2">Arts & Creativity</option>
                      <option value="3">Leadership & Social Change</option>
                      <option value="4">Entrepreneurship & Business</option>
-                  </select>
+                  </select> */}
+                  <div className="col-span-2">
+                     <Select
+                     isMulti
+                     options={groupOptions}
+                     value={groupParticipation}
+                     onChange={handleGroupChange}
+                     placeholder="Type of Participation" 
+                     className="text-black text-left"
+                     />
+                  </div>
                   <input
                      type="text"
                      placeholder="Special Requests or Needs e.g Accessibility, dietary needs, etc."
@@ -321,7 +390,7 @@ const submitSchoolForm = async (e) => {
 
       <Faq/>
       {/* Footer Section */}
-      <footer className="bg-blue-900 text-white py-6 px-4 text-center">
+      <footer className="bg-[#07154a] text-white py-6 px-4 text-center">
          <div className="flex justify-center space-x-6 mb-4">
             <a href="https://www.instagram.com/theofficialteensvoice?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" className="text-yellow-500">Instagram</a>
             <a href="https://youtube.com/@theofficialteensvoice?si=kahc5i6GoNAoM4Zc" className="text-yellow-500">YouTube</a>

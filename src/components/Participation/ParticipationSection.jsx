@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-scroll';
 
-const ParticipationSection = () => {
+const ParticipationSection = ({ setActiveTab }) => {
   return (
     <section className="bg-gray-100 py-12">
       <div className="container mx-auto px-4">
@@ -19,7 +19,7 @@ const ParticipationSection = () => {
               </li>
               <li><strong>Spectator Attendance:</strong> Be present on that day to experience the festival and its activities firsthand!</li>
             </ul>
-            <Link to="registration-section" className="block text-center bg-blue-500 text-white py-2 px-4 rounded-lg hover:bg-blue-600"  smooth={true} duration={500}>Register Your School</Link>
+            <Link to="school" onClick={() => setActiveTab(0)} className="block text-center bg-blue-500 text-white py-2 px-4 rounded-lg hover:bg-blue-600"  smooth={true} duration={500}>Register Your School</Link>
           </div>
 
           {/* Individual Participation */}
@@ -30,7 +30,7 @@ const ParticipationSection = () => {
               <li><strong>Showcasing your Creative Arts presentation:</strong> Be a part of the various performances and artistic displays.</li>
               <li><strong>Attending the Festival:</strong> Participate in the immersive and transformative experience of the festival by attending the event.</li>
             </ul>
-            <Link to="registration-section" className="block text-center bg-green-500 text-white py-2 px-4 rounded-lg hover:bg-green-600"  smooth={true} duration={500}>Register Individually</Link>
+            <Link to="registration-section" onClick={() => setActiveTab(1)} className="block text-center bg-green-500 text-white py-2 px-4 rounded-lg hover:bg-green-600"  smooth={true} duration={500}>Register Individually</Link>
           </div>
 
           {/* Group Participation */}
@@ -41,7 +41,7 @@ const ParticipationSection = () => {
               <li><strong>Display Creative Arts Presentations:</strong> Showcase your talent and creativity through various creative presentations.</li>
               <li><strong>Attending the Festial:</strong> Be live at the event to participate in this awe-inspiring festival of music & arts.</li>
             </ul>
-            <Link to="registration-section" className="block text-center bg-red-500 text-white py-2 px-4 rounded-lg hover:bg-red-600"  smooth={true} duration={500}>Register Your Group</Link>
+            <Link to="registration-section" onClick={() => setActiveTab(2)} className="block text-center bg-red-500 text-white py-2 px-4 rounded-lg hover:bg-red-600"  smooth={true} duration={500}>Register Your Group</Link>
           </div>
 
         </div>
