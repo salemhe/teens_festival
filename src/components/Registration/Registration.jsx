@@ -24,7 +24,7 @@ const RegistrationPage = ({ activeTab, setActiveTab }) => {
      { value: 'Attending only', label: 'Attending only' }
    ];
    const individualOptions = [
-     { value: 'Creative Arts Presentations', label: 'Workshops' },
+     { value: 'Creative Arts Presentations' },
      { value: 'Attending only', label: 'Art and Performance Sessions' },
    ]; 
    const groupOptions = [
