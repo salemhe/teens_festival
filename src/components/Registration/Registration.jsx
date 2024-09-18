@@ -24,13 +24,13 @@ const RegistrationPage = ({ activeTab, setActiveTab }) => {
      { value: 'Attending only', label: 'Attending only' }
    ];
    const individualOptions = [
-     { value: 'Creative Arts Presentations' },
-     { value: 'Attending only', label: 'Art and Performance Sessions' },
+     { value: 'Creative Arts Presentations', label: 'Creative Arts Presentations'},
+     { value: 'Attending only', label: 'Attending only' },
    ]; 
    const groupOptions = [
       { value: 'Creative Arts Presentations', label: 'Creative Arts Presentations' },
-      { value: 'Parade Participation', label: 'Parade Participation' },
-     { value: 'Creative Arts Presentations', label: 'Leadership & Social Change' },
+      // { value: 'Parade Participation', label: 'Parade Participation' },
+     { value: 'Attending only', label: 'Attending only' },
    ];
    const handleParticipationChange = (selectedOptions) => {
       setSelectedParticipation(selectedOptions);
