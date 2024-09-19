@@ -115,7 +115,7 @@ const submitSchoolForm = async (e) => {
       {/* <ParticipationSection onTabSwitch={handleTabSwitch} /> */}
       {/* Registration Section */}
       <section className="py-8 px-4 text-center">
-        <h2 className="text-3xl font-bold mb-4">Register Form</h2>
+        <h2 className="text-3xl font-bold mb-4">Registration Form</h2>
         <p className="mb-6">Please fill out the form below based on your participation type.<br/>  Make sure to complete all relevant sections for a smooth registration process.</p>
         <TabGroup selectedIndex={activeTab} onChange={setActiveTab} >
          <TabList  className="flex justify-center mb-4">
