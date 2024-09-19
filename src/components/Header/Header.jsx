@@ -2,7 +2,7 @@ import React from "react";
 import Countdown from "react-countdown";
 import { motion } from "framer-motion"; 
 import logo from "../../Assets/logo.png";
-import video from "../../Assets/festival-vid.mp4"
+import video from "../../Assets/festival-video.mp4"
 import { Link } from "react-scroll";
 
 const Header = () => {
